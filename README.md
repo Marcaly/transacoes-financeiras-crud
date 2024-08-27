@@ -1,4 +1,4 @@
-# Gerenciamento de Transações
+# Transações financeiras
 
 ## Visão Geral
 
