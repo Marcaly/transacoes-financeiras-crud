@@ -1,0 +1,19 @@
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .list-group-item .btn {
+    margin-bottom: 5px; 
+    width: 80px;
+  }
+  
+  .d-flex.justify-content-between {
+    width: 100%;
+  }
+  
+  .align-items-end {
+    align-items: flex-end;
+  }
+  

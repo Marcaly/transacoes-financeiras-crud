@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Formulário de Transações</h2>
+  <form [formGroup]="transactionForm" (ngSubmit)="submitForm()">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="description" class="form-label">Descrição</label>
+        <input id="description" formControlName="description" type="text" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label for="amount" class="form-label">Valor</label>
+        <input id="amount" formControlName="amount" type="number" class="form-control">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="transactionType" class="form-label">Tipo de Transação</label>
+        <select id="transactionType" formControlName="transaction_type" class="form-select">
+          <option value="expense">Despesa</option>
+          <option value="revenue">Receita</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="category" class="form-label">Categoria</label>
+        <select id="category" formControlName="category_id" class="form-select">
+          <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </form>
+</div>
